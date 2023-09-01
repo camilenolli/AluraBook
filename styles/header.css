@@ -1,0 +1,169 @@
+.cabeçalhoMenuHamburguer {
+   width: 24px;
+   height: 24px;
+   background-image: url("../img/Menu.svg");
+   background-repeat: no-repeat;
+   background-position: center;
+   display: inline-block; 
+}
+
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.containerImagem {
+    padding: 1em;
+}
+
+.listaMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.containerBotao:checked~.listaMenu {
+    display: block;
+}
+
+.listaMenuTitulo,
+.listaMenuItem {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.listaMenuTitulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.listaMenuLink {
+    background: var(--azulDegrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.containerBotao {
+    display: none;
+}
+
+.containerTitulo {
+    display: none;
+    display: block;
+}
+
+.opções {
+    display: none;
+}
+
+.containerTexto {
+    display: none;
+}
+
+.containerBotao:checked~.containerRótulo > .cabeçalhoMenuHamburguer {
+    background-image: url("../img/Menu\ Aberto.svg");
+} 
+
+.containerBotao:checked~.containerRótulo {
+    background: var(--azulDegrade);
+}
+
+@media screen and (min-width: 1024px) {
+    .containerTitulo, .containerTituloNegrito {
+        font-family: var(--fonteSecundaria);
+        font-size: 30px;
+    }
+
+    .containerTitulo {
+        font-weight: 400;
+
+        .containerTituloNegrito {
+            font-weight: 700;
+        }
+    }
+
+    .opções {
+        display: flex;
+    }
+
+    .opçõesItem {
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opçõesLink {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .containerImagemTransparente {
+        display: none;
+    }
+
+    .cabeçalhoMenuHamburguer {
+        display: none;
+    }
+
+    .opçõesBotão:checked ~.listaMenu {
+        display:block;
+        width: auto;
+    }
+
+    .opçõesBotão {
+        display: none;
+    }
+
+    .opçõesBotão:checked~.opçõesRótulo>.opçõesItem {
+        background: var(--azulDegrade);
+        color: var(--branco);
+    }
+
+    .opçõesItem {
+        padding: 2em 1em;
+    }
+
+    .listaMenuItem:hover {
+        background: var(--azulDegrade);
+    }
+
+    .listaMenuItem:hover>.listaMenuLink {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+}
+
+
+@media screen and (min-width: 1728px) {
+    .containerLink {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .cabeçalho {
+        padding: 0 2em;
+    }
+
+    .opções {
+        margin-right: auto;
+    }
+
+    .containerTexto {
+        display: block;
+    }
+
+}
+
+
